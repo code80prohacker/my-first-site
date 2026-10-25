@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя страница | Алексей Николаев</title>
+    <style>
+        /* Базовые стили для адаптивности и читаемости */
+        :root {
+            --primary-color: #000000;
+            --accent-color: #fa0c0c;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Семантическая структура */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1 { margin: 0; }
+        h2 { color: var(--primary-color); border-left: 5px solid var(--accent-color); padding-left: 10px; }
+        h3 { color: var(--accent-color); }
+
+        /* Стили для изображений */
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Стили для списков */
+        ul.skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+        }
+
+        ul.skills-list li {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            list-style: none;
+            font-size: 0.9em;
+        }
+
+        /* Aside (боковая панель или врезка) */
+        aside {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            main {
+                margin: 10px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Алексей Николаев</h1>
+        <p>Студент ИРНИТУ</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#education">Образование</a></li>
+                <li><a href="#hobbies">Хобби</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Раздел 1: Что мне нравится -->
+        <section id="about">
+            <h2>Что мне нравится</h2>
+            <article>
+                <figure>
+                    <!-- Замени src на ссылку на свое фото или локальный путь -->
+                    <img src="photo.jpg" alt="1337">
+                    <figcaption>1337</figcaption>
+                </figure>
+                <p>
+                    Привет! Меня зовут Алексей. Я занимаюсь веб-разработкой и дизайном, но подхожу к этому по-своему — мне важно внедрять свою эстетику в каждый проект и делать вещи с характером, а не по шаблону.
+Я довольно своеобразный человек. Меня вдохновляет атмосфера старых американских фильмов и классический западный вайб в музыке — в них есть особый стиль, который я стараюсь переносить и в визуал. Впрочем, в российском кинематографе и культуре тоже есть крутые, душевные вещи, которые мне близки.
+В общем, люблю смешивать разные эпохи и создавать интерфейсы, которые не просто работают, но и имеют свою уникальную душу. Мечта заработать на веб-разработках достаточно денег и купить Shevy Impala
+                </p>
+                <p>
+                </p>
+            </article>
+        </section>
+
+        <!-- Раздел 2: Образование и Навыки -->
+        <section id="education">
+            <h2>Образование и Навыки</h2>
+            
+            <article>
+                <h3>Текущее обучение</h3>
+                <p>Я обучаюсь в университете по специальности "Экономика топливно-энергетического комплекса".</p>
+                <ul>
+                    <li><strong>Курс:</strong> 2 курс бакалавриата</li>
+                    <li><strong>Любимый предмет:</strong> Веб-технологии</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Мои навыки</h3>
+                <p>Технологии, с которыми я работаю:</p>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (Basic)</li>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Раздел 3: Хобби (с использованием нестандартных тегов) -->
+        <section id="hobbies">
+            <h2>Мои увлечения</h2>
+            
+            <article>
+                <h3>Музыка</h3>
+                <p>Я люблю заниматься звукоинженерией. Это занятие меня расслабляет, и как заработок неплохо.</p>
+                <!-- Использование details/summary - бонусный семантический тег -->
+                <details>
+                    <summary>Нажмите, чтобы узнать секрет всемирных хитов</summary>
+                    <p>Правило «мелодического хука»: В треке каждые 3–4 секунды должно происходить изменение (добавляется бэк-вокал, меняется ритмический рисунок или звучит цепляющий элемент), чтобы удерживать внимание клипового мышления современного человека</p>
+                </details>
+            </article>
+
+            <article>
+                <h3>Вайб-кодинг</h3>
+                <p>В прошлом году я познакомился с этим термином. На данный момент имею пару  сгенерированых работ.</p>
+                <ul>
+                    <li>Личный ИИ-ассистент</li>
+                    <li>VPN конфигуратор и другие утилиты</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Дополнительная врезка -->
+        <aside>
+            <h3>Интересный факт</h3>
+            <p>Я знаю, как работает тег <code>&lt;details&gt;</code>, который вы сейчас видите!</p>
+            <p><time datetime="2026-10-25">25 октября 2026 года</time> — день сдачи этой работы.</p>
+        </aside>
+
+        <!-- Раздел 4: Контакты -->
+        <section id="contacts">
+            <h2>Связаться со мной</h2>
+            <p>Вопросы сотрудничества или предложения, пишите мне:</p>
+            <ul>
+                <li>Email: <a href="mailto:23aaaaeeeen32omg@gmail.com">23aaaaeeeen32omg@gmail.com</a></li>
+                <li>Telegram: <a href="нет" target="_blank">ищите в «Макс» — российский, самый безопасный мессенджер</a></li>
+                <li>GitHub: <a href="https://github.com/code80prohacker" target="_blank">github.com/code80prohacker</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Иван Иванов. Все права защищены.</p>
+        <p><small>Сверстано с любовью к семантике.</small></p>
+    </footer>
+
+</body>
+</html>
